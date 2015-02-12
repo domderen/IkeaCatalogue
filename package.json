@@ -50,7 +50,7 @@
       "aurelia-router": "^0.5.1",
       "bootstrap": "^3.3.1",
       "font-awesome": "^4.2.0",
-      "import-io": "github:import-io/client-js@master",
+      "import-io": "github:import-io/client-js-mini@^2.0.0",
       "jquery": "^2.1.3"
     }
   }
