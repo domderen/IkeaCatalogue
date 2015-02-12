@@ -15,21 +15,27 @@ export class Client{
 
     this.parameters = {
       query: '',
-      min_price: '',
-      max_price: '',
+      min_price: 1,
+      max_price: 10000,
       color: '',
       department: '',
-      sorting: '',
-      filter: ''
+      sorting: ''
     };
 
     this.colorValues = ['black', 'blue', 'brown', 'gray', 'green', 'red', 'white', 'yellow', 'other colors'];
     this.departmentValues = ['bathroom', 'bedroom', 'childrens_ikea', 'cooking', 'decoration', 'dining', 'eating', 'food', 'hallway'];
     this.sortingValues = ['name', 'price', 'newest'];
-    this.filterValues = ['online'];
+  }
+
+  getImageUrl(url) {
+    return url._value || url;
   }
 
   buildParameter(parameterName, parameterValue) {
+    if(typeof parameterValue !== "string") {
+      parameterValue = parameterValue.toString();
+    }
+
     if(parameterValue.trim() !== '') {
       return '&' + parameterName + "=" + parameterValue;
     }
@@ -55,7 +61,7 @@ export class Client{
 
     var url = this.buildIkeaUrl();
 
-    this.importIOClient.query({"input": { "webpage/url": url },"connectorGuids": [ "21c3aa7b-a3e4-40c1-897b-117de0322a42" ]})
+    this.importIOClient.query({input: { "webpage/url": url },connectorGuids: [ '21c3aa7b-a3e4-40c1-897b-117de0322a42' ], asObjects: true })
       .then(result => { this.results = result; console.log(result); }, error => { console.log(error); });
   }
 }
