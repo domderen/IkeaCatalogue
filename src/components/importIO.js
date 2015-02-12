@@ -1,13 +1,15 @@
-import importio from 'import-io';
+import {ImportIOFactory} from './importIOFactory';
 
 
 export class ImportIO {
-  constructor() {
+  static inject() { return [ImportIOFactory]; }
+  constructor(ImportIOFactory) {
+    this.importIO = ImportIOFactory;
     this.client = undefined;
   }
 
   init(userGuid, apiKey) {
-    this.client = new importio(userGuid, apiKey, "import.io");
+    this.client = new this.importIO.importIOConstructor(userGuid, apiKey, "import.io");
   }
 
   get isInitialized() {
