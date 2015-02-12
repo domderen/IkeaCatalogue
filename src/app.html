@@ -1,7 +1,21 @@
 <template>
   <section>
     <div class="row">
-     Something
+      <form role="form" submit.delegate="go($event)">
+        <input type="text" value.bind="clientCredentials.userGuid" class="form-control" required placeholder="User Guid">
+        <input type="text" value.bind="clientCredentials.apiKey" class="form-control" required placeholder="API Key">
+        <input type="text" value.bind="parameters.query" class="form-control" placeholder="Query">
+        <input type="number" value.bind="parameters.min_price" class="form-control" placeholder="Query">
+        <input type="number" value.bind="parameters.pax_price" class="form-control" placeholder="Query">
+
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+
+      <div class="col-md-4" repeat.for="obj of results">
+        <img src.bind="obj.prodimg_image" alt.bind="obj.prodimg_image/_alt">
+        <a href.bind="obj.link_1" target="_blank"><h3>${obj.proddesc_text}</h3></a>
+        <span>Price: ${obj.prodprice_price}</span>
+      </div>
     </div>
   </section>
 </template>
