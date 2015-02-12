@@ -45,7 +45,7 @@
     "dependencies": {
       "aurelia-bootstrapper": "^0.9.1",
       "aurelia-dependency-injection": "^0.4.1",
-      "aurelia-framework": "^0.8.4",
+      "aurelia-framework": "^0.8.6",
       "aurelia-http-client": "^0.4.4",
       "aurelia-router": "^0.5.1",
       "bootstrap": "^3.3.1",

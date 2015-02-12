@@ -18,7 +18,7 @@ System.config({
     "font-awesome": "npm:font-awesome@4.3.0",
     "import-io": "github:import-io/client-js-mini@2.0.0",
     "jquery": "github:components/jquery@2.1.3",
-    "github:aurelia/binding@0.3.3": {
+    "github:aurelia/binding@0.3.4": {
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.4.2",
       "aurelia-metadata": "github:aurelia/metadata@0.3.1",
       "aurelia-task-queue": "github:aurelia/task-queue@0.2.3"
@@ -41,7 +41,7 @@ System.config({
       "core-js": "npm:core-js@0.4.10"
     },
     "github:aurelia/framework@0.8.6": {
-      "aurelia-binding": "github:aurelia/binding@0.3.3",
+      "aurelia-binding": "github:aurelia/binding@0.3.4",
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.4.2",
       "aurelia-loader": "github:aurelia/loader@0.3.3",
       "aurelia-logging": "github:aurelia/logging@0.2.2",
@@ -75,11 +75,11 @@ System.config({
       "core-js": "npm:core-js@0.4.10"
     },
     "github:aurelia/templating-binding@0.8.4": {
-      "aurelia-binding": "github:aurelia/binding@0.3.3",
+      "aurelia-binding": "github:aurelia/binding@0.3.4",
       "aurelia-templating": "github:aurelia/templating@0.8.9"
     },
     "github:aurelia/templating-resources@0.8.6": {
-      "aurelia-binding": "github:aurelia/binding@0.3.3",
+      "aurelia-binding": "github:aurelia/binding@0.3.4",
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.4.2",
       "aurelia-templating": "github:aurelia/templating@0.8.9",
       "core-js": "npm:core-js@0.4.10"
@@ -92,7 +92,7 @@ System.config({
       "aurelia-templating": "github:aurelia/templating@0.8.9"
     },
     "github:aurelia/templating@0.8.9": {
-      "aurelia-binding": "github:aurelia/binding@0.3.3",
+      "aurelia-binding": "github:aurelia/binding@0.3.4",
       "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.4.2",
       "aurelia-html-template-element": "github:aurelia/html-template-element@0.1.2",
       "aurelia-loader": "github:aurelia/loader@0.3.3",

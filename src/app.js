@@ -2,7 +2,7 @@ import {ImportIO} from './components/importIO'
 
 var ikeaBaseUrl = 'http://www.ikea.com/us/en/search/?category=products';
 
-export class Client{
+export class App{
   static inject() { return [ImportIO]; }
   constructor(ImportIO){
     this.importIOClient = ImportIO;
@@ -53,6 +53,7 @@ export class Client{
   }
 
   go(e) {
+    var self = this;
     e.preventDefault();
 
     if(!this.importIOClient.isInitialized) {
@@ -62,6 +63,8 @@ export class Client{
     var url = this.buildIkeaUrl();
 
     this.importIOClient.query({input: { "webpage/url": url },connectorGuids: [ '21c3aa7b-a3e4-40c1-897b-117de0322a42' ], asObjects: true })
-      .then(result => { this.results = result; console.log(result); }, error => { console.log(error); });
+      .then(result => {
+        self.results = result; console.log(result);
+      }, error => { console.log(error); });
   }
 }
