@@ -3,8 +3,15 @@ import importio from 'import-io';
 
 export class ImportIO {
   constructor() {
-    var that = this;
-    this.client = new importio("b81b82d5-5dc6-4c91-9791-3c4279727744", "Mx8H87eDK6/vgG9rYEiMzbvpptrEYW0Ujvq/IJGHv3/vc5mE1TrPSJNPgM2OjJuM86EJRUiQcLT8Dclai1u0Rw==", "import.io");
+    this.client = undefined;
+  }
+
+  init(userGuid, apiKey) {
+    this.client = new importio(userGuid, apiKey, "import.io");
+  }
+
+  get isInitialized() {
+    return this.client !== undefined;
   }
 
   connect() {
