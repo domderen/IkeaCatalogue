@@ -4,6 +4,7 @@
       <form role="form" submit.delegate="go($event)">
         <input type="text" value.bind="clientCredentials.userGuid" class="form-control" required placeholder="User Guid">
         <input type="text" value.bind="clientCredentials.apiKey" class="form-control" required placeholder="API Key">
+        <input type="text" value.bind="clientCredentials.connectorGuid" class="form-control" required placeholder="Connector Guid">
         <input type="text" value.bind="parameters.query" class="form-control" placeholder="Query">
         <input type="number" value.bind="parameters.min_price" class="form-control" placeholder="Minimal Price">
         <input type="number" value.bind="parameters.max_price" class="form-control" placeholder="Maximal Price">

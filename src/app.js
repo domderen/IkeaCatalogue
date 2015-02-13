@@ -10,7 +10,8 @@ export class App{
 
     this.clientCredentials = {
       userGuid: '',
-      apiKey: ''
+      apiKey: '',
+      connectorGuid: ''
     };
 
     this.parameters = {
@@ -62,7 +63,7 @@ export class App{
 
     var url = this.buildIkeaUrl();
 
-    this.importIOClient.query({input: { "webpage/url": url },connectorGuids: [ '21c3aa7b-a3e4-40c1-897b-117de0322a42' ], asObjects: true })
+    this.importIOClient.query({input: { "webpage/url": url },connectorGuids: [ this.clientCredentials.connectorGuid ], asObjects: true })
       .then(result => {
         self.results = result; console.log(result);
       }, error => { console.log(error); });

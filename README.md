@@ -58,7 +58,7 @@ jspm install aurelia-router
 
 ## Project description ##
 
-This application utilizes https://github.com/import-io/client-js-mini to query the ImportIO API, and obtain the data about Ikea products. It requires providing your User Guid and API Key to perform the query, as well as the Connector Guid that will be used to search for data.
+This application utilizes https://github.com/import-io/client-js-mini to query the ImportIO API, and obtain the data about Ikea products. It requires providing your User Guid and API Key to perform the query, as well as the Connector Guid that will be used to search for data. The connector that will be utilized has to first be trained for Ikea data.
 
 I thought about utilizing https://github.com/import-io/client-js to create a standalone application, that doesn't require authentication, and just performs the queries, with backend server for signing them, but there two main problems with that.
 * Full client-js library is cumbersome to connect though JSPM, as it doesn't expose the fully built version of the library at the moment, and JSPM by default does not allow script concatenation. It probably could be done by utilizing a Gulp script for scripts concatenation, but second point stopped me from experimenting with it more.
