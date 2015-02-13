@@ -1,6 +1,6 @@
 {
   "name": "ikea-catalogue",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "A simple search engine interface for Ikea products catalogue, which utilizes Import.IO API for data querying.",
   "keywords": [
     "ikea",

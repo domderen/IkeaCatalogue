@@ -1,4 +1,4 @@
-import {ImportIO} from './components/importIO'
+import {ImportIO} from './components/importIO';
 
 var ikeaBaseUrl = 'http://www.ikea.com/us/en/search/?category=products';
 
