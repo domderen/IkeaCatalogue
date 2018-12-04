@@ -1,5 +1,7 @@
 # IkeaCatalogue #
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/domderen/IkeaCatalogue.svg)](https://greenkeeper.io/)
+
 A simple search engine interface for Ikea products catalogue, which utilizes Import.IO API for data querying.
 
 ## Installation ##
